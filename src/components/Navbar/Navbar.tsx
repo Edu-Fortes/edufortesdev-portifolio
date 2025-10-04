@@ -17,8 +17,9 @@ const menuItems: INavmenuItemList[] = navmenuItemListData;
 
 export function Navbar() {
   return (
-    <div>
-      <NavigationMenu>
+    <section className="flex items-center justify-between px-4 py-4">
+      <h1 className="text-xl">&lt;EF/&gt;</h1>
+      <NavigationMenu className="mr-8">
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger>Menu</NavigationMenuTrigger>
@@ -36,6 +37,6 @@ export function Navbar() {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-    </div>
+    </section>
   );
 }
