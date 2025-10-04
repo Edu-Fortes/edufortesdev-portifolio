@@ -15,7 +15,7 @@ import { navmenuItemListData } from '@/data/navmenuItemListData';
 
 const menuItems: INavmenuItemList[] = navmenuItemListData;
 
-export function Navbar() {
+export default function Navbar() {
   return (
     <section className="flex items-center justify-between px-4 py-4">
       <h1 className="text-xl">&lt;EF/&gt;</h1>
