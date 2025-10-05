@@ -6,11 +6,11 @@ export default function Hero() {
   return (
     <section className="pt-15 text-sm">
       <div className="space-y-6 px-4">
-        <h2 className="font-extralight">Eduardo Fortes Web Developer</h2>
-        <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">
+        <h1 className="font-extralight">Eduardo Fortes Web Developer</h1>
+        <h2 className="text-4xl font-bold sm:text-5xl md:text-6xl">
           Coding Concepts into Seamless{' '}
           <span className="text-ring">User Experiences</span>
-        </h1>
+        </h2>
         <p className="mt-4 max-w-xl">
           Hi! I&apos;m a passionate web developer dedicated to crafting
           exceptional digital experiences, bringing your vision to life!
