@@ -27,6 +27,7 @@ export default function Hero() {
         alt="picture of a man developer in black long sleeve shirt using computer"
         width={500}
         height={500}
+        priority
         className="mt-10"
       />
     </section>
