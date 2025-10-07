@@ -1,7 +1,9 @@
-import Features from '@/components/Features';
+import CardFeatures from '@/components/Features/CardFeature';
+import Features from '@/components/Features/Features';
 import Hero from '@/components/Hero';
 import Navbar from '@/components/Navbar/Navbar';
 import { ThemeToggle } from '@/components/ThemeToggle';
+import { featuresData } from '@/data/featuresData';
 
 export default function Home() {
   return (
@@ -11,7 +13,16 @@ export default function Home() {
         <Hero />
       </header>
       <main>
-        <Features />
+        <Features>
+          {featuresData.map((feature) => (
+            <CardFeatures
+              key={feature.data.id}
+              data={feature.data}
+              justify={feature.justify}
+              align={feature.align}
+            />
+          ))}
+        </Features>
       </main>
       <ThemeToggle />
     </div>
