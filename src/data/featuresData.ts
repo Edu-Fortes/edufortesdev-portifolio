@@ -1,4 +1,4 @@
-import { IFeaturesDataProps } from '@/interface/IFeaturesDataProps';
+import { IFeaturesDataProps } from '@/interface/ICardFeaturesProps';
 
 export const featuresData: IFeaturesDataProps[] = [
   {

@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import { Card, CardContent } from '../ui/card';
-import { IFeaturesDataProps } from '@/interface/IFeaturesDataProps';
+import { ICardFeaturesProps } from '@/interface/ICardFeaturesProps';
 
 export default function CardFeatures({
   data,
   justify,
   align,
-}: IFeaturesDataProps) {
+}: ICardFeaturesProps) {
   const justifyMap = {
     top: 'justify-start',
     center: 'justify-center',

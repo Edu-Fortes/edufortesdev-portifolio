@@ -1,6 +1,6 @@
 import { IFeaturesData } from './IFeaturesData';
 
-export interface IFeaturesDataProps {
+export interface ICardFeaturesProps {
   data: IFeaturesData;
   justify?: 'top' | 'center' | 'bottom';
   align?: 'left' | 'center' | 'right';
