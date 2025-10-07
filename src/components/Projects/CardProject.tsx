@@ -31,8 +31,10 @@ function CardProject() {
           simulation of the planets using Three.js.
         </CardDescription>
       </CardContent>
-      <CardFooter>
-        <Badge variant="outline">Angular</Badge>
+      <CardFooter className="justify-between">
+        <div>
+          <Badge variant="outline">Angular</Badge>
+        </div>
         <Button variant="link">Live site &#8599;</Button>
       </CardFooter>
     </Card>
