@@ -2,6 +2,8 @@ import CardFeatures from '@/components/Features/CardFeature';
 import Features from '@/components/Features/Features';
 import Hero from '@/components/Hero';
 import Navbar from '@/components/Navbar/Navbar';
+import CardProject from '@/components/Projects/CardProject';
+import Projects from '@/components/Projects/Projects';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { featuresData } from '@/data/featuresData';
 
@@ -12,7 +14,7 @@ export default function Home() {
         <Navbar />
         <Hero />
       </header>
-      <main>
+      <main className="space-y-15">
         <Features>
           {featuresData.map((feature) => (
             <CardFeatures
@@ -23,6 +25,9 @@ export default function Home() {
             />
           ))}
         </Features>
+        <Projects>
+          <CardProject />
+        </Projects>
       </main>
       <ThemeToggle />
     </div>
