@@ -6,6 +6,7 @@ import CardProject from '@/components/Projects/CardProject';
 import Projects from '@/components/Projects/Projects';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { featuresData } from '@/data/featuresData';
+import { projectsData } from '@/data/projectsData';
 
 export default function Home() {
   return (
@@ -26,7 +27,9 @@ export default function Home() {
           ))}
         </Features>
         <Projects>
-          <CardProject />
+          {projectsData.map((project) => (
+            <CardProject key={project.data.id} data={project.data} />
+          ))}
         </Projects>
       </main>
       <ThemeToggle />

@@ -1,6 +1,6 @@
-import { IFeaturesDataProps } from '@/interface/ICardFeaturesProps';
+import { ICardFeaturesProps } from '@/interface/ICardFeaturesProps';
 
-export const featuresData: IFeaturesDataProps[] = [
+export const featuresData: ICardFeaturesProps[] = [
   {
     data: {
       id: 1,
