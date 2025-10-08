@@ -6,19 +6,22 @@ import {
   CardHeader,
   CardTitle,
 } from '../ui/card';
+import { IPlatformDataProps } from '@/interface/ICardPlatformProps';
 
-export default function CardPlatform() {
+export default function CardPlatform({ data }: IPlatformDataProps) {
   return (
     <Card>
       <CardHeader>
-        <Image src="/coder.png" alt="Coder" width={70} height={70} />
+        <Image
+          src={data.image.src}
+          alt={data.image.alt}
+          width={70}
+          height={70}
+        />
       </CardHeader>
       <CardContent>
-        <CardTitle className="mb-4">Access to an exclusive platform</CardTitle>
-        <CardDescription>
-          Get access to our exclusive platform with premium features to follow
-          all development process.
-        </CardDescription>
+        <CardTitle className="mb-4">{data.title}</CardTitle>
+        <CardDescription>{data.description}</CardDescription>
       </CardContent>
     </Card>
   );

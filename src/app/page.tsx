@@ -8,6 +8,7 @@ import CardProject from '@/components/Projects/CardProject';
 import Projects from '@/components/Projects/Projects';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { featuresData } from '@/data/featuresData';
+import { platformData } from '@/data/platformData';
 import { projectsData } from '@/data/projectsData';
 
 export default function Home() {
@@ -34,7 +35,9 @@ export default function Home() {
           ))}
         </Projects>
         <Platform>
-          <CardPlatform />
+          {platformData.map((card) => (
+            <CardPlatform key={card.data.id} data={card.data} />
+          ))}
         </Platform>
       </main>
       <ThemeToggle />
