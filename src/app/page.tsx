@@ -23,7 +23,7 @@ export default function Home() {
         <Navbar />
         <Hero />
       </header>
-      <main className="space-y-15">
+      <main className="mb-0 space-y-15">
         <Features>
           {featuresData.map((feature) => (
             <CardFeatures
