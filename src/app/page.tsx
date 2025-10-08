@@ -7,9 +7,12 @@ import Platform from '@/components/Platform/Platform';
 import CardProject from '@/components/Projects/CardProject';
 import Projects from '@/components/Projects/Projects';
 import { ThemeToggle } from '@/components/ThemeToggle';
+import CardWorkflow from '@/components/Workflow/CardWorkflow';
+import Workflow from '@/components/Workflow/Workflow';
 import { featuresData } from '@/data/featuresData';
 import { platformData } from '@/data/platformData';
 import { projectsData } from '@/data/projectsData';
+import { workflowData } from '@/data/workflowData';
 
 export default function Home() {
   return (
@@ -39,6 +42,11 @@ export default function Home() {
             <CardPlatform key={card.data.id} data={card.data} />
           ))}
         </Platform>
+        <Workflow>
+          {workflowData.map((card) => (
+            <CardWorkflow key={card.data.id} data={card.data} />
+          ))}
+        </Workflow>
       </main>
       <ThemeToggle />
     </div>
