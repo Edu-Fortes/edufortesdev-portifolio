@@ -1,11 +1,13 @@
 import CardFeatures from '@/components/Features/CardFeature';
 import Features from '@/components/Features/Features';
+import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import Navbar from '@/components/Navbar/Navbar';
 import CardPlatform from '@/components/Platform/CardPlatform';
 import Platform from '@/components/Platform/Platform';
 import CardProject from '@/components/Projects/CardProject';
 import Projects from '@/components/Projects/Projects';
+import SocialMediaIcons from '@/components/SocialMediaIcons';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import CardWorkflow from '@/components/Workflow/CardWorkflow';
 import Workflow from '@/components/Workflow/Workflow';
@@ -48,6 +50,9 @@ export default function Home() {
           ))}
         </Workflow>
       </main>
+      <Footer>
+        <SocialMediaIcons />
+      </Footer>
       <ThemeToggle />
     </div>
   );
