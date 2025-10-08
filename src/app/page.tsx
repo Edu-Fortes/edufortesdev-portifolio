@@ -2,6 +2,8 @@ import CardFeatures from '@/components/Features/CardFeature';
 import Features from '@/components/Features/Features';
 import Hero from '@/components/Hero';
 import Navbar from '@/components/Navbar/Navbar';
+import CardPlatform from '@/components/Platform/CardPlatform';
+import Platform from '@/components/Platform/Platform';
 import CardProject from '@/components/Projects/CardProject';
 import Projects from '@/components/Projects/Projects';
 import { ThemeToggle } from '@/components/ThemeToggle';
@@ -31,6 +33,9 @@ export default function Home() {
             <CardProject key={project.data.id} data={project.data} />
           ))}
         </Projects>
+        <Platform>
+          <CardPlatform />
+        </Platform>
       </main>
       <ThemeToggle />
     </div>
