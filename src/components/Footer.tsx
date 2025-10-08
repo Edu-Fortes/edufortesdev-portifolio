@@ -1,6 +1,6 @@
 export default function Footer({ children }: { children: React.ReactNode }) {
   return (
-    <footer className="bg-yellow-400 pt-15">
+    <footer className="bg-[url(/pattern_footer.svg)] bg-cover bg-center bg-repeat pt-15">
       <div className="px-4 py-6">
         <h2 className="mb-8 text-center text-3xl font-bold">
           Ready to take <span className="text-ring">your</span> digital presence
