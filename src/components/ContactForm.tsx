@@ -6,7 +6,6 @@ import { useForm } from 'react-hook-form';
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -15,6 +14,8 @@ import {
 import { Input } from './ui/input';
 import { Button } from './ui/button';
 import { useState } from 'react';
+import { Textarea } from './ui/textarea';
+import { Spinner } from './ui/spinner';
 
 const formSchema = z.object({
   name: z
@@ -22,6 +23,10 @@ const formSchema = z.object({
     .min(2, { message: 'Name should be at least 2 characters long' })
     .max(50, { message: 'Name should be at most 50 characters long' }),
   email: z.email({ message: 'Invalid email address' }),
+  message: z
+    .string()
+    .min(10, { message: 'Message should be at least 10 characters long' })
+    .max(160, { message: 'Message should be at most 160 characters long' }),
 });
 
 export default function ContactForm() {
@@ -30,6 +35,7 @@ export default function ContactForm() {
     defaultValues: {
       name: '',
       email: '',
+      message: '',
     },
   });
 
@@ -71,9 +77,6 @@ export default function ContactForm() {
               <FormControl>
                 <Input placeholder="Name" {...field} />
               </FormControl>
-              <FormDescription>
-                This is your public display name.
-              </FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -88,9 +91,24 @@ export default function ContactForm() {
               <FormControl>
                 <Input placeholder="Email" {...field} />
               </FormControl>
-              <FormDescription>
-                This is your public display email.
-              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="message"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Message</FormLabel>
+              <FormControl>
+                <Textarea
+                  placeholder="Leave a message..."
+                  className="resize-none"
+                  {...field}
+                />
+              </FormControl>
               <FormMessage />
             </FormItem>
           )}
@@ -98,7 +116,13 @@ export default function ContactForm() {
 
         <div>
           <Button type="submit" disabled={loading}>
-            {loading ? 'Sending...' : 'Submit'}
+            {loading ? (
+              <>
+                <Spinner /> Enviando...
+              </>
+            ) : (
+              'Entrar em contato'
+            )}
           </Button>
         </div>
 
