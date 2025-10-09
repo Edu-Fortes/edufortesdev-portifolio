@@ -8,7 +8,7 @@ import Platform from '@/components/Platform/Platform';
 import CardProject from '@/components/Projects/CardProject';
 import Projects from '@/components/Projects/Projects';
 import SocialMediaIcons from '@/components/SocialMediaIcons';
-import { ThemeToggle } from '@/components/ThemeToggle';
+import ThemeToggle from '@/components/ThemeToggle';
 import CardWorkflow from '@/components/Workflow/CardWorkflow';
 import Workflow from '@/components/Workflow/Workflow';
 import { featuresData } from '@/data/featuresData';
