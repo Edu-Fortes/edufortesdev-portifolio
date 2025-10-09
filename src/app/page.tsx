@@ -1,3 +1,4 @@
+import ContactForm from '@/components/ContactForm';
 import CardFeatures from '@/components/Features/CardFeature';
 import Features from '@/components/Features/Features';
 import Footer from '@/components/Footer';
@@ -51,6 +52,7 @@ export default function Home() {
         </Workflow>
       </main>
       <Footer>
+        <ContactForm />
         <SocialMediaIcons />
       </Footer>
       <ThemeToggle />
