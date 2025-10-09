@@ -2,6 +2,7 @@
 
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { cn } from '@/lib/utils';
 import { useForm } from 'react-hook-form';
 import {
   Form,
@@ -29,7 +30,7 @@ const formSchema = z.object({
     .max(160, { message: 'Message should be at most 160 characters long' }),
 });
 
-export default function ContactForm() {
+export default function ContactForm({ className }: { className?: string }) {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -67,7 +68,10 @@ export default function ContactForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className={cn('space-y-4', className)}
+      >
         <FormField
           control={form.control}
           name="name"
