@@ -53,7 +53,7 @@ export default function Home() {
         </Workflow>
       </main>
       <Footer>
-        <ContactForm className="py-8" />
+        <ContactForm className="mx-auto max-w-3/5 py-8" />
         <SocialMediaIcons />
       </Footer>
       <ThemeToggle />
