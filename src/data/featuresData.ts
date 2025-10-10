@@ -14,7 +14,7 @@ export const featuresData: ICardFeaturesProps[] = [
     },
     justify: 'bottom',
     align: 'left',
-    grid: 'col-span-7 row-span-[6]',
+    grid: 'md:col-span-7 md:row-span-[6]',
   },
   {
     data: {
@@ -29,7 +29,7 @@ export const featuresData: ICardFeaturesProps[] = [
     },
     justify: 'top',
     align: 'left',
-    grid: 'col-span-5 row-span-[3] grid-col-start-8',
+    grid: 'md:col-span-5 md:row-span-[3] md:grid-col-start-8',
   },
   {
     data: {
@@ -45,7 +45,7 @@ export const featuresData: ICardFeaturesProps[] = [
     },
     justify: 'center',
     align: 'left',
-    grid: 'col-span-5 row-span-[3] grid-col-start-4 grid-row-start-8',
+    grid: 'md:col-span-5 md:row-span-[3] md:grid-col-start-4 md:grid-row-start-8',
   },
   {
     data: {
@@ -60,7 +60,7 @@ export const featuresData: ICardFeaturesProps[] = [
     },
     justify: 'top',
     align: 'left',
-    grid: 'col-span-4 row-span-[2] grid-row-start-7',
+    grid: 'md:col-span-4 md:row-span-[2] md:grid-row-start-7',
   },
   {
     data: {
@@ -76,7 +76,7 @@ export const featuresData: ICardFeaturesProps[] = [
     },
     justify: 'center',
     align: 'left',
-    grid: 'col-span-8 row-span-[4]  grid-col-start-5 grid-row-start-7',
+    grid: 'md:col-span-8 md:row-span-[4]  md:grid-col-start-5 md:grid-row-start-7',
   },
 
   {
@@ -92,6 +92,6 @@ export const featuresData: ICardFeaturesProps[] = [
     },
     justify: 'center',
     align: 'center',
-    grid: 'col-span-4 row-span-[2] grid-row-start-9 grid-col-start-1',
+    grid: 'md:col-span-4 md:row-span-[2] md:grid-row-start-9 md:grid-col-start-1',
   },
 ];

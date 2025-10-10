@@ -25,7 +25,7 @@ export default function CardFeatures({
 
   return (
     <Card
-      className={`relative ${justifyClasses} overflow-hidden ${grid} h-full`}
+      className={`relative ${justifyClasses} overflow-hidden ${grid} h-full w-full`}
     >
       {data.img ? (
         <Image
