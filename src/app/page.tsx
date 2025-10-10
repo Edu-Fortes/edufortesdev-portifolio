@@ -3,6 +3,8 @@ import CardFeatures from '@/components/Features/CardFeature';
 import Features from '@/components/Features/Features';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
+import DesktopNav from '@/components/Navbar/DesktopNav';
+import MobileNav from '@/components/Navbar/MobileNav';
 import Navbar from '@/components/Navbar/Navbar';
 import CardPlatform from '@/components/Platform/CardPlatform';
 import Platform from '@/components/Platform/Platform';
@@ -21,7 +23,10 @@ export default function Home() {
   return (
     <div className="mx-auto max-w-[1440px] space-y-15 pt-16 font-sans">
       <header>
-        <Navbar />
+        <Navbar>
+          <MobileNav />
+          <DesktopNav />
+        </Navbar>
         <Hero />
       </header>
       <main className="mb-0 space-y-15">
