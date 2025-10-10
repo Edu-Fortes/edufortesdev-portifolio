@@ -6,6 +6,7 @@ export default function CardFeatures({
   data,
   justify,
   align,
+  grid,
 }: ICardFeaturesProps) {
   const justifyMap = {
     top: 'justify-start',
@@ -22,15 +23,9 @@ export default function CardFeatures({
   const justifyClasses = justifyMap[justify || 'center'];
   const alignClasses = alignMap[align || 'center'];
 
-  const aspectStyle =
-    data.img && 'width' in data.img && 'height' in data.img
-      ? { aspectRatio: `${data.img.width} / ${data.img.height}` }
-      : undefined;
-
   return (
     <Card
-      className={`relative ${justifyClasses} overflow-hidden`}
-      style={aspectStyle}
+      className={`relative ${justifyClasses} overflow-hidden ${grid} h-full`}
     >
       {data.img ? (
         <Image

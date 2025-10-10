@@ -32,6 +32,7 @@ export default function Home() {
               data={feature.data}
               justify={feature.justify}
               align={feature.align}
+              grid={feature.grid}
             />
           ))}
         </Features>
