@@ -19,7 +19,7 @@ import { workflowData } from '@/data/workflowData';
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-[1440px] space-y-15 font-sans">
+    <div className="mx-auto max-w-[1440px] space-y-15 pt-16 font-sans">
       <header>
         <Navbar />
         <Hero />
