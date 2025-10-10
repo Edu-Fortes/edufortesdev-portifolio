@@ -22,12 +22,20 @@ import { workflowData } from '@/data/workflowData';
 export default function Home() {
   return (
     <div className="mx-auto max-w-[1440px] space-y-15 pt-16 font-sans">
-      <header>
-        <Navbar>
-          <MobileNav />
-          <DesktopNav />
-        </Navbar>
-        <Hero />
+      <header className="relative">
+        {/* background layer - clipped only the image */}
+        <div
+          className="lg:clip-hero absolute -top-16 right-0 bottom-0 left-0 -z-10 hidden bg-[url(/developer.jpg)] bg-cover bg-center lg:block"
+          aria-hidden="true"
+        />
+
+        <div className="relative z-10">
+          <Navbar>
+            <MobileNav />
+            <DesktopNav />
+          </Navbar>
+          <Hero />
+        </div>
       </header>
       <main className="mb-0 space-y-15">
         <Features>

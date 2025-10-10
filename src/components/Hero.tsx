@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className="pt-15 text-sm">
+    <section className="pt-15 text-sm lg:flex">
       <div className="space-y-6 px-4">
         <h1 className="font-extralight">Eduardo Fortes Web Developer</h1>
         <h2 className="text-4xl font-bold sm:text-5xl md:text-6xl">
@@ -22,14 +22,16 @@ export default function Hero() {
           <Link href="#">See my work &#8594;</Link>
         </Button>
       </div>
-      <Image
-        src="/developer.jpg"
-        alt="picture of a man developer in black long sleeve shirt using computer"
-        width={1440}
-        height={960}
-        priority
-        className="mt-10"
-      />
+      <div>
+        <Image
+          src="/developer.jpg"
+          alt="picture of a man developer in black long sleeve shirt using computer"
+          width={1440}
+          height={960}
+          priority
+          className="mt-10 lg:opacity-0"
+        />
+      </div>
     </section>
   );
 }
