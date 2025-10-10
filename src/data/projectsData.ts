@@ -15,8 +15,8 @@ export const projectsData: ICardProjectsProps[] = [
       img: {
         src: '/card_earth.png',
         alt: 'card background',
-        width: 500,
-        height: 500,
+        width: 1440,
+        height: 960,
       },
       liveSiteURL: '#',
     },
