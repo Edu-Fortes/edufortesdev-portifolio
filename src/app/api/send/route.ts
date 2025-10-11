@@ -12,8 +12,8 @@ export async function POST(req: Request) {
       typeof body?.message === 'string' ? body.message : 'No message';
 
     const { data, error } = await resend.emails.send({
-      from: 'LP Contato <form.contact@edufortes.dev>',
-      to: ['contact@edufortes.dev'],
+      from: 'LP Form Contato <nao-responda@mail.edufortes.dev>',
+      to: ['form.contact@edufortes.dev'],
       subject: 'New Contact Form Submission',
       react: EmailTemplate({
         name,
