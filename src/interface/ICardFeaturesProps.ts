@@ -4,4 +4,5 @@ export interface ICardFeaturesProps {
   data: IFeaturesData;
   justify?: 'top' | 'center' | 'bottom';
   align?: 'left' | 'center' | 'right';
+  grid?: string;
 }
