@@ -122,5 +122,5 @@
 }
 
 @utility clip-hero {
-  clip-path: polygon(70% 0, 100% 0, 100% 100%, 55% 100%);
+  clip-path: polygon(65% 0, 100% 0, 100% 100%, 50% 100%);
 }

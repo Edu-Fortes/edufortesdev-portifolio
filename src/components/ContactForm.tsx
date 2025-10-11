@@ -70,7 +70,7 @@ export default function ContactForm({ className }: { className?: string }) {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className={cn('space-y-4', className)}
+        className={cn('space-y-4 lg:mt-25 lg:max-w-2/5', className)}
       >
         <FormField
           control={form.control}

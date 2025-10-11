@@ -37,7 +37,7 @@ export default function Home() {
           <Hero />
         </div>
       </header>
-      <main className="mb-0 space-y-15">
+      <main className="mb-0 space-y-15 lg:mt-60 lg:space-y-50">
         <Features>
           {featuresData.map((feature) => (
             <CardFeatures

@@ -1,6 +1,6 @@
 export default function Footer({ children }: { children: React.ReactNode }) {
   return (
-    <footer className="pt-15">
+    <footer className="pt-15 lg:pt-50">
       <div className="px-4 py-6">
         <h2 className="mb-8 text-center text-3xl font-bold">
           Ready to take <span className="text-ring">your</span> digital presence
