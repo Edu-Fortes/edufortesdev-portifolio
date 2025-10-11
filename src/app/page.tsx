@@ -23,7 +23,6 @@ export default function Home() {
   return (
     <div className="mx-auto max-w-[1440px] space-y-15 pt-16 font-sans">
       <header className="relative">
-        {/* background layer - clipped only the image */}
         <div
           className="lg:clip-hero absolute -top-16 right-0 bottom-0 left-0 -z-10 hidden bg-[url(/developer.jpg)] bg-cover bg-center lg:block"
           aria-hidden="true"

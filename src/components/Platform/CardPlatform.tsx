@@ -6,9 +6,9 @@ import {
   CardHeader,
   CardTitle,
 } from '../ui/card';
-import { IPlatformDataProps } from '@/interface/ICardPlatformProps';
+import { ICardPlatformProps } from '@/interface/ICardPlatformProps';
 
-export default function CardPlatform({ data }: IPlatformDataProps) {
+export default function CardPlatform({ data }: ICardPlatformProps) {
   return (
     <Card>
       <CardHeader>
