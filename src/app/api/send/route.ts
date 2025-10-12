@@ -1,4 +1,5 @@
-import EmailTemplate from '@/components/util/email-template';
+import FormConfirmationEmail from '@/components/util/emails-templates/form-confirmation-email';
+import NewContactEmail from '@/components/util/emails-templates/new-contact-email';
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -11,16 +12,29 @@ export async function POST(req: Request) {
     const message =
       typeof body?.message === 'string' ? body.message : 'No message';
 
-    const { data, error } = await resend.emails.send({
-      from: 'LP Form Contato <nao-responda@mail.edufortes.dev>',
-      to: ['form.contact@edufortes.dev'],
-      subject: 'New Contact Form Submission',
-      react: EmailTemplate({
-        name,
-        email,
-        message,
-      }),
-    });
+    const { data, error } = await resend.batch.send([
+      {
+        from: 'LP Form Contato <no-reply@mail.edufortes.dev>',
+        to: ['form.contato@edufortes.dev'],
+        subject: 'Novo contato recebido!',
+        react: NewContactEmail({
+          name,
+          email,
+          message,
+        }),
+      },
+      {
+        from: 'EduFortes.dev <contato@mail.edufortes.dev>',
+        to: [`${name} <${email}>`],
+        replyTo: 'contato@edufortes.dev',
+        subject: 'Recebi sua mensagem!',
+        react: FormConfirmationEmail({
+          name,
+          email,
+          message,
+        }),
+      },
+    ]);
 
     if (error) {
       return Response.json({ error }, { status: 500 });

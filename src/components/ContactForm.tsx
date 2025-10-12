@@ -27,7 +27,7 @@ const formSchema = z.object({
   message: z
     .string()
     .min(10, { message: 'Message should be at least 10 characters long' })
-    .max(160, { message: 'Message should be at most 160 characters long' }),
+    .max(300, { message: 'Message should be at most 300 characters long' }),
 });
 
 export default function ContactForm({ className }: { className?: string }) {
