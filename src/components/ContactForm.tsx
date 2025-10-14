@@ -70,7 +70,10 @@ export default function ContactForm({ className }: { className?: string }) {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className={cn('space-y-4 lg:mt-25 lg:max-w-2/5', className)}
+        className={cn(
+          'space-y-4 md:max-w-3/5 lg:mt-25 lg:max-w-2/5',
+          className,
+        )}
       >
         <FormField
           control={form.control}
@@ -125,7 +128,7 @@ export default function ContactForm({ className }: { className?: string }) {
                 <Spinner /> Enviando...
               </>
             ) : (
-              'Entrar em contato'
+              'Iniciar uma conversa'
             )}
           </Button>
         </div>
