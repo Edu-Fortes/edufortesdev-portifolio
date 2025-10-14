@@ -4,7 +4,7 @@ export const featuresData: ICardFeaturesProps[] = [
   {
     data: {
       id: 1,
-      title: 'I prioritize client collaboration, fostering open communication',
+      title: 'Comunicação clara, sem barreiras e flexível',
       img: {
         src: '/card_notebook.png',
         alt: 'card background',
@@ -19,7 +19,7 @@ export const featuresData: ICardFeaturesProps[] = [
   {
     data: {
       id: 2,
-      title: `I'm very flexible with time zone communications`,
+      title: 'Colaboração total, do início ao fim',
       img: {
         src: '/card_globe.png',
         alt: 'card background',
@@ -34,8 +34,8 @@ export const featuresData: ICardFeaturesProps[] = [
   {
     data: {
       id: 3,
-      title: 'My tech stack',
-      subtitle: 'I constantly try to improve',
+      title: 'Técnologias modernas',
+      subtitle: 'Seu sucesso com',
       img: {
         src: '/card_tech.png',
         alt: 'card background',
@@ -50,7 +50,7 @@ export const featuresData: ICardFeaturesProps[] = [
   {
     data: {
       id: 4,
-      title: 'Tech enthusiast with passion for development',
+      title: 'Trabalhando juntos, alcançamos resultados melhores',
       img: {
         src: '/card_browser.png',
         alt: 'card background',
@@ -65,8 +65,8 @@ export const featuresData: ICardFeaturesProps[] = [
   {
     data: {
       id: 5,
-      title: 'Currently open to new opportunities',
-      subtitle: 'Feel free to reach out!',
+      title: 'Transformando sua ideia em realidade com linhas de código',
+      subtitle: 'Testemunhe a magia',
       img: {
         src: '/card_code.png',
         alt: 'card background',
@@ -82,7 +82,7 @@ export const featuresData: ICardFeaturesProps[] = [
   {
     data: {
       id: 6,
-      title: 'Do you want to start a project?',
+      title: 'Você quer iniciar um projeto?',
       img: {
         src: '/card_gradient.png',
         alt: 'card background',

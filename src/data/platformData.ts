@@ -4,9 +4,9 @@ export const platformData: ICardPlatformProps[] = [
   {
     data: {
       id: 1,
-      title: 'Access to an exclusive platform',
+      title: 'Código do Zero. Performance Incomparável.',
       description:
-        'Get access to our exclusive platform with premium features to follow all development process.',
+        'Ao contrário das plataformas baseadas em templates, que são pesadas e cheias de código extra, eu construo cada site do zero. O resultado? Um site extremamente rápido e seguro que ranqueia melhor e proporciona uma experiência de usuário excepcional em qualquer dispositivo.',
       image: {
         src: '/coder.png',
         alt: 'Coder',
@@ -16,9 +16,9 @@ export const platformData: ICardPlatformProps[] = [
   {
     data: {
       id: 2,
-      title: 'Easy communication',
+      title: ' Propriedade Total. Controle Absoluto',
       description:
-        'All communication is done through our platform, making it easy to follow.',
+        'Seu site, seu código. Desde o primeiro dia, você é o dono de cada linha de código. Chega de pagar assinaturas para manter sua presença online. Você ganha a liberdade e flexibilidade para evoluir seu site sem ficar preso a uma plataforma rígida.',
       image: {
         src: '/laptop.png',
         alt: 'Laptop',
@@ -28,9 +28,9 @@ export const platformData: ICardPlatformProps[] = [
   {
     data: {
       id: 3,
-      title: 'Approve each step of the way',
+      title: 'Um Parceiro, Não um Fornecedor',
       description:
-        'View, review, alter and approve each step of the way, making sure you are always in control.',
+        'Eu não apenas entrego um produto final. Trabalho em parceria com você para entender os objetivos únicos do seu negócio, seu público e seus desafios. Minha abordagem personalizada garante que seu site seja um ativo estratégico, não apenas um folheto digital.',
       image: {
         src: '/lamp.png',
         alt: 'Lamp',
@@ -40,9 +40,9 @@ export const platformData: ICardPlatformProps[] = [
   {
     data: {
       id: 4,
-      title: 'Upload and share files',
+      title: 'Um site que cresce com o seu negócio',
       description:
-        'Easily upload and share files with your team through our platform.',
+        'O lançamento é apenas o começo. Eu garanto que sua página continue rodando sem interrupções e com a mesma performance do primeiro dia. Meu compromisso é assegurar que o seu site seja um ativo duradouro, pronto para evoluir junto com o seu sucesso',
       image: {
         src: '/coder_coding.png',
         alt: 'Coder',

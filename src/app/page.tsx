@@ -1,3 +1,4 @@
+import About from '@/components/About';
 import ContactForm from '@/components/ContactForm';
 import CardFeatures from '@/components/Features/CardFeature';
 import Features from '@/components/Features/Features';
@@ -48,6 +49,7 @@ export default function Home() {
             />
           ))}
         </Features>
+        <About />
         <Projects>
           {projectsData.map((project) => (
             <CardProject key={project.data.id} data={project.data} />
