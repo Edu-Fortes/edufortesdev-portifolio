@@ -1,4 +1,7 @@
+'use client';
+
 import Image from 'next/image';
+import { useTheme } from 'next-themes';
 import { Card, CardContent } from '../ui/card';
 import { ICardFeaturesProps } from '@/interface/ICardFeaturesProps';
 
@@ -8,6 +11,7 @@ export default function CardFeatures({
   align,
   grid,
 }: ICardFeaturesProps) {
+  const { theme, systemTheme } = useTheme();
   const justifyMap = {
     top: 'justify-start',
     center: 'justify-center',
@@ -23,14 +27,31 @@ export default function CardFeatures({
   const justifyClasses = justifyMap[justify || 'center'];
   const alignClasses = alignMap[align || 'center'];
 
+  // Determine the current theme
+  const currentTheme = theme === 'system' ? systemTheme : theme;
+
+  // Get the appropriate image source based on theme
+  const getImageSrc = () => {
+    if (!data.img) return null;
+
+    if (typeof data.img.src === 'string') {
+      return data.img.src;
+    }
+
+    // If src is an object with dark/light variants
+    return currentTheme === 'dark' ? data.img.src.dark : data.img.src.light;
+  };
+
+  const imageSrc = getImageSrc();
+
   return (
     <Card
       className={`relative ${justifyClasses} overflow-hidden ${grid} h-full w-full`}
     >
-      {data.img ? (
+      {imageSrc ? (
         <Image
-          src={data.img.src}
-          alt={data.img.alt}
+          src={imageSrc}
+          alt={data.img?.alt || ''}
           fill
           className="object-cover"
         />
@@ -38,12 +59,10 @@ export default function CardFeatures({
 
       {/* Gradient overlay for contrast */}
       <div
-        className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/10"
+        className="absolute inset-0 bg-gradient-to-t from-blue-200/50 to-transparent dark:bg-gradient-to-r dark:from-black dark:via-transparent dark:to-black/80"
         aria-hidden="true"
       />
-      <CardContent
-        className={`relative z-10 flex flex-col ${alignClasses} text-white`}
-      >
+      <CardContent className={`relative z-10 flex flex-col ${alignClasses}`}>
         {data.subtitle && (
           <p className="mt-2 text-xs font-extralight opacity-90">
             {data.subtitle}

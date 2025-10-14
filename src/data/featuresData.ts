@@ -6,7 +6,10 @@ export const featuresData: ICardFeaturesProps[] = [
       id: 1,
       title: 'Comunicação clara, sem barreiras e flexível',
       img: {
-        src: '/card_notebook.png',
+        src: {
+          dark: '/dark-comunication.png',
+          light: '/light-comunication.png',
+        },
         alt: 'card background',
         width: 691,
         height: 543,
@@ -21,7 +24,10 @@ export const featuresData: ICardFeaturesProps[] = [
       id: 2,
       title: 'Colaboração total, do início ao fim',
       img: {
-        src: '/card_globe.png',
+        src: {
+          dark: '/dark-collaboration.png',
+          light: '/light-collaboration.png',
+        },
         alt: 'card background',
         width: 400,
         height: 197,
@@ -37,7 +43,10 @@ export const featuresData: ICardFeaturesProps[] = [
       title: 'Técnologias modernas',
       subtitle: 'Seu sucesso com',
       img: {
-        src: '/card_tech.png',
+        src: {
+          dark: '/dark-tech-stack.png',
+          light: '/light-tech-stack.png',
+        },
         alt: 'card background',
         width: 400,
         height: 197,
@@ -52,7 +61,10 @@ export const featuresData: ICardFeaturesProps[] = [
       id: 4,
       title: 'Trabalhando juntos, alcançamos resultados melhores',
       img: {
-        src: '/card_browser.png',
+        src: {
+          dark: '/dark-better-together.png',
+          light: '/light-better-together.png',
+        },
         alt: 'card background',
         width: 400,
         height: 175,
@@ -68,7 +80,10 @@ export const featuresData: ICardFeaturesProps[] = [
       title: 'Transformando sua ideia em realidade com linhas de código',
       subtitle: 'Testemunhe a magia',
       img: {
-        src: '/card_code.png',
+        src: {
+          dark: '/dark-top-idea.png',
+          light: '/light-top-idea.png',
+        },
         alt: 'card background',
         width: 400,
         height: 182,
@@ -84,10 +99,13 @@ export const featuresData: ICardFeaturesProps[] = [
       id: 6,
       title: 'Você quer iniciar um projeto?',
       img: {
-        src: '/card_gradient.png',
+        src: {
+          dark: '/dark-rocket-lauch.png',
+          light: '/light-rocket-lauch.png',
+        },
         alt: 'card background',
         width: 400,
-        height: 144,
+        height: 200,
       },
     },
     justify: 'center',
