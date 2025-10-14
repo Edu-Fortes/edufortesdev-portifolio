@@ -8,7 +8,7 @@ export const platformData: ICardPlatformProps[] = [
       description:
         'Ao contrário das plataformas baseadas em templates, que são pesadas e cheias de código extra, eu construo cada site do zero. O resultado? Um site extremamente rápido e seguro que ranqueia melhor e proporciona uma experiência de usuário excepcional em qualquer dispositivo.',
       image: {
-        src: '/coder.png',
+        src: '/icon-performance.png',
         alt: 'Coder',
       },
     },
@@ -20,7 +20,7 @@ export const platformData: ICardPlatformProps[] = [
       description:
         'Seu site, seu código. Desde o primeiro dia, você é o dono de cada linha de código. Chega de pagar assinaturas para manter sua presença online. Você ganha a liberdade e flexibilidade para evoluir seu site sem ficar preso a uma plataforma rígida.',
       image: {
-        src: '/laptop.png',
+        src: '/icon-ownership.png',
         alt: 'Laptop',
       },
     },
@@ -32,7 +32,7 @@ export const platformData: ICardPlatformProps[] = [
       description:
         'Eu não apenas entrego um produto final. Trabalho em parceria com você para entender os objetivos únicos do seu negócio, seu público e seus desafios. Minha abordagem personalizada garante que seu site seja um ativo estratégico, não apenas um folheto digital.',
       image: {
-        src: '/lamp.png',
+        src: '/icon-partner.png',
         alt: 'Lamp',
       },
     },
@@ -44,7 +44,7 @@ export const platformData: ICardPlatformProps[] = [
       description:
         'O lançamento é apenas o começo. Eu garanto que sua página continue rodando sem interrupções e com a mesma performance do primeiro dia. Meu compromisso é assegurar que o seu site seja um ativo duradouro, pronto para evoluir junto com o seu sucesso',
       image: {
-        src: '/coder_coding.png',
+        src: '/icon-growth.png',
         alt: 'Coder',
       },
     },
