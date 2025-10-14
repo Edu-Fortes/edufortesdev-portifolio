@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 import { Card, CardContent } from '../ui/card';
 import { ICardFeaturesProps } from '@/interface/ICardFeaturesProps';
@@ -12,6 +13,11 @@ export default function CardFeatures({
   grid,
 }: ICardFeaturesProps) {
   const { theme, systemTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   const justifyMap = {
     top: 'justify-start',
     center: 'justify-center',
@@ -27,9 +33,6 @@ export default function CardFeatures({
   const justifyClasses = justifyMap[justify || 'center'];
   const alignClasses = alignMap[align || 'center'];
 
-  // Determine the current theme
-  const currentTheme = theme === 'system' ? systemTheme : theme;
-
   // Get the appropriate image source based on theme
   const getImageSrc = () => {
     if (!data.img) return null;
@@ -38,7 +41,14 @@ export default function CardFeatures({
       return data.img.src;
     }
 
-    // If src is an object with dark/light variants
+    // If src is an object with dark/light variants, wait for mount
+    if (!mounted) {
+      // Return light version as default during SSR to avoid hydration mismatch
+      return data.img.src.light;
+    }
+
+    // Determine the current theme only on client side
+    const currentTheme = theme === 'system' ? systemTheme : theme;
     return currentTheme === 'dark' ? data.img.src.dark : data.img.src.light;
   };
 
