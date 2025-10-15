@@ -21,7 +21,7 @@ export default function CardPlatform({ data }: ICardPlatformProps) {
           alt={data.image.alt}
           width={150}
           height={150}
-          className="rounded-lg"
+          className="h-auto w-auto rounded-lg"
         />
       </CardHeader>
       <CardContent>
