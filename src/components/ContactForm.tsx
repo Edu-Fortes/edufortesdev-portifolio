@@ -4,6 +4,7 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { cn } from '@/lib/utils';
 import { useForm } from 'react-hook-form';
+import { useRouter } from 'next/navigation';
 import {
   Form,
   FormControl,
@@ -31,6 +32,7 @@ const formSchema = z.object({
 });
 
 export default function ContactForm({ className }: { className?: string }) {
+  const router = useRouter();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -56,8 +58,9 @@ export default function ContactForm({ className }: { className?: string }) {
       });
       const json = await res.json();
       if (!res.ok) throw new Error(json?.error?.message || 'Failed to send');
-      setSuccess('Message sent — thank you!');
-      form.reset();
+
+      // Redirect to thank you page on success
+      router.push('/thanks');
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : String(err);
       setError(msg || 'An unexpected error occurred');
