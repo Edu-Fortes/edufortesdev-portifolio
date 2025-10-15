@@ -2,12 +2,12 @@ import Image from 'next/image';
 
 export default function About() {
   return (
-    <section>
-      <h2 className="text-center text-3xl font-bold">
+    <section className="px-4">
+      <h2 className="mb-8 text-center text-3xl font-bold lg:mb-25">
         <span className="text-ring">Sou um artesão</span> em um mundo de
         fábricas
       </h2>
-      <div className="mt-20 flex gap-10">
+      <div className="flex flex-wrap items-center justify-center px-4 lg:px-0">
         <Image
           src="/craftsman.png"
           alt="craftsman"
