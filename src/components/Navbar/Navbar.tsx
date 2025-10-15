@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import ThemeToggle from '../ThemeToggle';
+import Link from 'next/link';
 
 export default function Navbar({ children }: { children?: React.ReactNode }) {
   const [hidden, setHidden] = useState(false);
@@ -42,7 +43,9 @@ export default function Navbar({ children }: { children?: React.ReactNode }) {
       aria-hidden={hidden}
     >
       <div className="mx-auto flex max-w-[1440px] items-center px-4 py-4 md:gap-8">
-        <h1 className="text-xl">&lt;EF/&gt;</h1>
+        <h1 className="text-xl">
+          <Link href="#home">&lt;EF/&gt;</Link>
+        </h1>
 
         <div className="flex flex-1 items-center justify-end md:justify-start">
           {children}

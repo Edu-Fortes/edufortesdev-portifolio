@@ -1,6 +1,6 @@
 export default function Platform({ children }: { children: React.ReactNode }) {
   return (
-    <section className="px-4">
+    <section id="platform" className="px-4">
       <div className="mb-8 text-center lg:mb-25">
         <h2 className="text-3xl font-bold">
           Seu Negócio

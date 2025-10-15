@@ -72,7 +72,7 @@ export default function CardFeatures({
         className="absolute inset-0 bg-gradient-to-t from-blue-200/50 to-transparent dark:bg-gradient-to-r dark:from-black dark:via-transparent dark:to-black/80"
         aria-hidden="true"
       />
-      <CardContent className={`relative z-10 flex flex-col ${alignClasses}`}>
+      <CardContent className={`relative z-1 flex flex-col ${alignClasses}`}>
         {data.subtitle && (
           <p className="mt-2 text-xs font-extralight opacity-90">
             {data.subtitle}

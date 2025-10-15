@@ -3,22 +3,27 @@ import { INavmenuItemList } from '@/interface/INavmenuItemList';
 export const navmenuItemListData: INavmenuItemList[] = [
   {
     id: 1,
-    title: 'About',
-    href: '#',
+    title: 'Sobre',
+    href: '#about',
   },
   {
     id: 2,
-    title: 'Projects',
-    href: '#',
+    title: 'Projetos',
+    href: '#projects',
   },
   {
     id: 3,
-    title: 'Workflow',
-    href: '#',
+    title: 'Vantagens',
+    href: '#platform',
   },
   {
     id: 4,
-    title: 'Contact',
-    href: '#',
+    title: 'Workflow',
+    href: '#workflow',
+  },
+  {
+    id: 5,
+    title: 'Contato',
+    href: '#contact',
   },
 ];
