@@ -13,15 +13,23 @@ import { Badge } from '../ui/badge';
 import { Button } from '../ui/button';
 
 export default function CardProject({ data }: ICardProjectsProps) {
+  // Extract string src (CardProject only uses single images, not theme variants)
+  const imageSrc =
+    data.img && typeof data.img.src === 'string'
+      ? data.img.src
+      : data.img && typeof data.img.src === 'object'
+        ? data.img.src.light
+        : undefined;
+
   return (
     <Card key={data.id}>
       <CardHeader>
-        {data.img ? (
+        {imageSrc ? (
           <Image
-            src={data.img.src}
-            alt={data.img.alt}
-            width={data.img.width}
-            height={data.img.height}
+            src={imageSrc}
+            alt={data.img?.alt || ''}
+            width={data.img?.width}
+            height={data.img?.height}
             className="rounded-lg object-cover"
           />
         ) : null}

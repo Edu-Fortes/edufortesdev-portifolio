@@ -4,6 +4,7 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { cn } from '@/lib/utils';
 import { useForm } from 'react-hook-form';
+import { useRouter } from 'next/navigation';
 import {
   Form,
   FormControl,
@@ -27,10 +28,11 @@ const formSchema = z.object({
   message: z
     .string()
     .min(10, { message: 'Message should be at least 10 characters long' })
-    .max(160, { message: 'Message should be at most 160 characters long' }),
+    .max(300, { message: 'Message should be at most 300 characters long' }),
 });
 
 export default function ContactForm({ className }: { className?: string }) {
+  const router = useRouter();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -56,8 +58,9 @@ export default function ContactForm({ className }: { className?: string }) {
       });
       const json = await res.json();
       if (!res.ok) throw new Error(json?.error?.message || 'Failed to send');
-      setSuccess('Message sent — thank you!');
-      form.reset();
+
+      // Redirect to thank you page on success
+      router.push('/thanks');
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : String(err);
       setError(msg || 'An unexpected error occurred');
@@ -69,17 +72,21 @@ export default function ContactForm({ className }: { className?: string }) {
   return (
     <Form {...form}>
       <form
+        id="contact"
         onSubmit={form.handleSubmit(onSubmit)}
-        className={cn('space-y-4 lg:mt-25 lg:max-w-2/5', className)}
+        className={cn(
+          'space-y-4 md:max-w-3/5 lg:mt-25 lg:max-w-2/5',
+          className,
+        )}
       >
         <FormField
           control={form.control}
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Name</FormLabel>
+              <FormLabel>Nome</FormLabel>
               <FormControl>
-                <Input placeholder="Name" {...field} />
+                <Input {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -91,9 +98,9 @@ export default function ContactForm({ className }: { className?: string }) {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email</FormLabel>
+              <FormLabel>E-mail</FormLabel>
               <FormControl>
-                <Input placeholder="Email" {...field} />
+                <Input {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -105,13 +112,9 @@ export default function ContactForm({ className }: { className?: string }) {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              <FormLabel>Mensagem</FormLabel>
               <FormControl>
-                <Textarea
-                  placeholder="Leave a message..."
-                  className="resize-none"
-                  {...field}
-                />
+                <Textarea className="resize-none" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -125,7 +128,7 @@ export default function ContactForm({ className }: { className?: string }) {
                 <Spinner /> Enviando...
               </>
             ) : (
-              'Entrar em contato'
+              'Iniciar uma conversa'
             )}
           </Button>
         </div>

@@ -1,3 +1,4 @@
+import About from '@/components/About';
 import ContactForm from '@/components/ContactForm';
 import CardFeatures from '@/components/Features/CardFeature';
 import Features from '@/components/Features/Features';
@@ -11,7 +12,6 @@ import Platform from '@/components/Platform/Platform';
 import CardProject from '@/components/Projects/CardProject';
 import Projects from '@/components/Projects/Projects';
 import SocialMediaIcons from '@/components/SocialMediaIcons';
-import ThemeToggle from '@/components/ThemeToggle';
 import CardWorkflow from '@/components/Workflow/CardWorkflow';
 import Workflow from '@/components/Workflow/Workflow';
 import { featuresData } from '@/data/featuresData';
@@ -21,7 +21,10 @@ import { workflowData } from '@/data/workflowData';
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-[1440px] space-y-15 pt-16 font-sans">
+    <div
+      id="home"
+      className="mx-auto max-w-[1440px] space-y-15 pt-16 font-sans"
+    >
       <header className="relative">
         <div
           className="lg:clip-hero absolute -top-16 right-0 bottom-0 left-0 -z-10 hidden bg-[url(/developer.jpg)] bg-cover bg-center lg:block"
@@ -36,7 +39,7 @@ export default function Home() {
           <Hero />
         </div>
       </header>
-      <main className="mb-0 space-y-15 lg:mt-60 lg:space-y-50">
+      <main className="mb-0 space-y-35 lg:mt-60 lg:space-y-50">
         <Features>
           {featuresData.map((feature) => (
             <CardFeatures
@@ -48,6 +51,7 @@ export default function Home() {
             />
           ))}
         </Features>
+        <About />
         <Projects>
           {projectsData.map((project) => (
             <CardProject key={project.data.id} data={project.data} />
@@ -65,10 +69,9 @@ export default function Home() {
         </Workflow>
       </main>
       <Footer>
-        <ContactForm className="mx-auto max-w-3/5 py-8" />
+        <ContactForm className="mx-auto py-8" />
         <SocialMediaIcons />
       </Footer>
-      <ThemeToggle />
     </div>
   );
 }

@@ -9,14 +9,19 @@ import {
 import { ICardPlatformProps } from '@/interface/ICardPlatformProps';
 
 export default function CardPlatform({ data }: ICardPlatformProps) {
+  // Extract string src (CardPlatform only uses single images, not theme variants)
+  const imageSrc =
+    typeof data.image.src === 'string' ? data.image.src : data.image.src.light;
+
   return (
     <Card>
       <CardHeader>
         <Image
-          src={data.image.src}
+          src={imageSrc}
           alt={data.image.alt}
-          width={70}
-          height={70}
+          width={150}
+          height={150}
+          className="h-auto w-auto rounded-lg"
         />
       </CardHeader>
       <CardContent>
