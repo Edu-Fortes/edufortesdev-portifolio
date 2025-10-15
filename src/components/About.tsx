@@ -10,7 +10,7 @@ export default function About() {
       <div className="flex flex-wrap items-center justify-center px-4 lg:px-0">
         <Image
           src="/craftsman.png"
-          alt="craftsman"
+          alt="Mundo digital dividido ao meio: à esquerda, ferramentas de desenho técnico como compasso e esquadros flutuam com trechos de código em azul neon, simbolizando design artesanal. À direita, fileiras de servidores e esteiras de produção em cinza, representando automação e fábricas. Um núcleo brilhante conecta os dois lados"
           width={600}
           height={400}
           className="border-ring rounded-lg border"
