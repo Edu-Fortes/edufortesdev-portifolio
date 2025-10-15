@@ -69,6 +69,7 @@ export default function ContactForm({ className }: { className?: string }) {
   return (
     <Form {...form}>
       <form
+        id="contact"
         onSubmit={form.handleSubmit(onSubmit)}
         className={cn(
           'space-y-4 md:max-w-3/5 lg:mt-25 lg:max-w-2/5',

@@ -19,7 +19,7 @@ export default function Hero() {
           resultados.
         </p>
         <Button className="mt-6 lg:mt-24">
-          <Link href="#">Vamos falar do Seu Projeto</Link>
+          <Link href="#contact">Vamos falar do Seu Projeto</Link>
         </Button>
         <Button variant="link" className="text-sm">
           <Link href="#">Veja meus trabalho &#8594;</Link>
