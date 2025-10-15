@@ -13,7 +13,7 @@ export const projectsData: ICardProjectsProps[] = [
         { id: 3, name: 'TypeScript' },
       ],
       img: {
-        src: '/card_earth.png',
+        src: '/mandala-edufortesdev.png',
         alt: 'card background',
         width: 1440,
         height: 960,
@@ -33,7 +33,7 @@ export const projectsData: ICardProjectsProps[] = [
         { id: 3, name: 'Tailwind' },
       ],
       img: {
-        src: '/card_earth.png',
+        src: '/mandala-edufortesdev.png',
         alt: 'card background',
         width: 500,
         height: 500,
@@ -55,7 +55,7 @@ export const projectsData: ICardProjectsProps[] = [
         { id: 5, name: 'PostgreSQL' },
       ],
       img: {
-        src: '/card_earth.png',
+        src: '/mandala-edufortesdev.png',
         alt: 'card background',
         width: 500,
         height: 500,
@@ -75,7 +75,7 @@ export const projectsData: ICardProjectsProps[] = [
         { id: 3, name: 'Tailwind' },
       ],
       img: {
-        src: '/card_earth.png',
+        src: '/mandala-edufortesdev.png',
         alt: 'card background',
         width: 500,
         height: 500,
